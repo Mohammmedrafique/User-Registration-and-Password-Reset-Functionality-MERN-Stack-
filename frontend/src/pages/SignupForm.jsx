@@ -35,7 +35,7 @@ const SignupForm = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:8000/api/user/register", {
+      const response = await fetch("https://able-dress-production.up.railway.app/api/user/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

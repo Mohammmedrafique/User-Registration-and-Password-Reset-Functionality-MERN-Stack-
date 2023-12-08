@@ -12,9 +12,12 @@ function ResetPassword() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`http://localhost:8000/api/user/reset-password/${id}/${token}`, {
-        password,
-      })
+      .post(
+        `https://able-dress-production.up.railway.app/api/user/reset-password/${id}/${token}`,
+        {
+          password,
+        }
+      )
       .then((res) => {
         const status = res.data && res.data.status;
         if (status === "Success") {
