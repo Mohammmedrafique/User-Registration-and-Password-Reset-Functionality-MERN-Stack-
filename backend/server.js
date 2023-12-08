@@ -1,7 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
-const cors = require("cors"); // Add CORS middleware
+const cors = require("cors");
 const connectDB = require("./config/db");
 
 // dotenv config
@@ -16,7 +16,12 @@ const app = express();
 // middlewares
 app.use(express.json());
 app.use(morgan("dev"));
-app.use(cors()); // Enable CORS for all routes
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  })
+);
 
 // routes
 app.use("/api/user", require("./routes/userRoutes"));
