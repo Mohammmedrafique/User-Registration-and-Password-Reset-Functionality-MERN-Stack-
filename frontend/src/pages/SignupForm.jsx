@@ -61,7 +61,7 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="mt-10 flex items-center justify-center">
+    <div className="mt-20 flex items-center justify-center">
       <form
         className="bg-white p-8 shadow-md rounded-md"
         onSubmit={handleSubmit}
