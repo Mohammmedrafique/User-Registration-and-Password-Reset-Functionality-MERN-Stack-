@@ -70,7 +70,7 @@ const forgotPasswordController = async (req, res) => {
     });
 
     // Replace the placeholder with the actual user's email
-    const resetLink = `http://localhost:5173/reset_password/${user._id}/${token}`;
+    const resetLink = `https://user-registration-and-password-reset-functionality-mern-stack.vercel.app/reset_password/${user._id}/${token}`;
 
     var transporter = nodemailer.createTransport({
       service: "gmail",
