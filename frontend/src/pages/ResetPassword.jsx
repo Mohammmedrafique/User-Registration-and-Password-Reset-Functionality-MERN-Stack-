@@ -29,7 +29,7 @@ function ResetPassword() {
   };
 
   return (
-    <div className="flex justify-center items-center bg-gray-800 m-16">
+    <div className="flex justify-center items-center bg-gray-800 m-14">
       <div className="bg-white p-8 rounded shadow-lg w-full sm:w-2/3 md:w-1/2 lg:w-1/3">
         <h4 className="text-2xl font-bold mb-4">Reset Password</h4>
         <form onSubmit={handleSubmit}>
