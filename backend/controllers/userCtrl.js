@@ -125,9 +125,25 @@ const resetPasswordController = async (req, res) => {
   }
 };
 
+const logoutController = (req, res) => {
+  try {
+    const { token } = req.body;
+
+    const index = revokedTokens.indexOf(token);
+    if (index !== -1) {
+      revokedTokens.splice(index, 1);
+    }
+
+    res.status(200).send({ message: "Logout Success", success: true });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({ message: `Error in Logout CTRL ${error.message}` });
+  }
+};
 module.exports = {
   loginController,
   registerController,
   resetPasswordController,
   forgotPasswordController,
+  logoutController,
 };
