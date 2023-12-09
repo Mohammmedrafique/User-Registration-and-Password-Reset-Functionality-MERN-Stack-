@@ -17,7 +17,6 @@ function ForgotPassword() {
         { email }
       )
       .then((res) => {
-        // console.log("Response:", res);
         const status = res.data && res.data.status;
         if (status === "Success") {
           alert("Password reset link sent to your email");
@@ -32,8 +31,8 @@ function ForgotPassword() {
   };
 
   return (
-    <div className="flex justify-center items-center bg-gray-800 min-h-screen">
-      <div className="bg-white p-8 rounded shadow-lg w-1/3">
+    <div className="flex justify-center items-center m-16">
+      <div className="bg-white p-8 rounded shadow-lg md:w-1/3 w-full">
         <h4 className="text-2xl font-bold mb-4">Forgot Password</h4>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
